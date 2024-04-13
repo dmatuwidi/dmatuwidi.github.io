@@ -1,0 +1,77 @@
+/* Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(23,39,57);
+    background: radial-gradient(circle, rgba(23,39,57,1) 0%, rgba(7,12,18,1) 100%);
+
+    font-family: 'akira_expandedsuper_bold';
+    color: #CDE4FF;
+}
+
+/* header/navbar */
+header {
+    color: #617995;
+    padding: 40px 150px;
+    font-size: 20px;
+    font-family: 'Playfair Display';
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul * {
+    display: flex;
+}
+
+.navlist * {
+    margin-left: 20px;
+}
+
+/* body/main */
+main {
+    padding: 20px 150px;
+}
+
+.maintext {
+    font-size: 150px;
+    font-weight: 600;
+    font-stretch: expanded;
+    text-transform: uppercase;
+    color: #FF6B00;
+}
+
+/* footer */
+footer {
+    color: #617995;
+    padding: 40px 150px;
+    font-size: 15px;
+    font-family: 'Playfair Display';
+
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: black;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav ul * {
+    display: flex;
+}
+
+.footlist * {
+    margin-right: 20px;
+}
