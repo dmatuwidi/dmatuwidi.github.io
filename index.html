@@ -3,104 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damy Matuwidi - Portfolio 2024</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="akira-expanded/stylesheet.css">
+    <title>Damy's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f2a7d30dde.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <span class="title">
-                    <li>Portfolio</li>
-                </span>
-                <span class="navlist">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </span>
-            </ul>
-        </nav>
+        <h2>Portfolio</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
     </header>
-    <hr>
     <main>
-        <section>
-            <div class="maintext">
-                <h1>Damy Matuwidi</h1>
-                <h3 class="subtext">Aspiring Software Engineer</h3>
-            </div>
-        </section>
-        <section class="summary">
-            <div class="skill-summary">
-                <span>
-                    <li>Web Development</li>
-                    <li>|</li>
-                    <li>UI/UX</li>
-                    <li>|</li>
-                    <li>Design</li>
-                    <li>|</li>
-                    <li>Programming</li>
-                </span>   
-            </div>
+        <section class="hero">
+            <h1>Damy Matuwidi</h1>
+            <h2>Aspiring Software Engineer</h2>
+
+            <ul class="socials">
+                <li><a href="https://github.com/dmatuwidi" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/damymatuwidi/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a></li>
+                <li><a href="mailto:dmatuwidi@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a></li>
+            </ul>
         </section>
         <section id="about" class="about">
-            <div>
-                <h1>About</h1>
-                <span>Hi, I'm Damy, a 19-year-old from the United Kingdom.<br>
-                    I'm passionate in pursuing various technical roles,
-                    and I enjoy learning challenges and overcoming them. 
-                </span>   
+            <h3>About</h3>
+            <p>I've had a passion for computers since the late 2000's, spending almost all my time figuring out the many things I could do with one. Although the start of my programming passion began at age 6 where I first learnt the language <b>Lua</b> on the now popular gaming platform, <b>ROBLOX</b>, in 2011.</p><br>
+            <p> Seeing how others made captivating games inspired me to give a shot at it, leading me into various aspects of game design, including 3D Modelling, Graphics, Motion Design and more. At an early age, I was collaborating with other likeminded young people in order to make experiences others can enjoy.</p><br>
+            <p>This early passion has led me nowadays to pursue Computer Science at GCSE, A-Level and Degree level, as the subject continues to intrigue me at every step of the way. I aspire to put my theoretical and practical knowledge altogether to good use in the technology industry.</p>
+        </section>
+        <section id="skills" class="skills">
+            <h3>Skills</h3>
+            <h4>Technical Skills</h4>
+            <div class="radial-bars">
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path1" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">
+                        Python
+                    </div>
+                </div>
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path2" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">75%</div>
+                    <div class="text">
+                        Java
+                    </div>
+                </div>
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path3" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">
+                        HTML & CSS
+                    </div>
+                </div>
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path4" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">
+                        SQL
+                    </div>
+                </div>
+            </div>
+            <h4>Transferrable Skills</h4>
+            <div class="radial-bars">
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path5" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">
+                        Problem Solving
+                    </div>
+                </div>
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path6" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">
+                        Teamwork
+                    </div>
+                </div>
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path7" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">100%</div>
+                    <div class="text">
+                        Communication
+                    </div>
+                </div>
+                <div class="radial">
+                    <svg x="8px" y="8px" viewbox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
+                        <circle class="path path8" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="percentage">75%</div>
+                    <div class="text">
+                        Leadership
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="skills" id="skills">
-            <div>
-                <h1>Skills</h1>
-                <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>HTML & CSS</li>
-                    <li>SQL</li>
-                </ul>
+        <section id="projects" class="projects">
+            <h3>Projects</h3>
+            <div class="card-container">
+                <div class="project-card">
+                    <img class="project-img" src="https://media.licdn.com/dms/image/D4E12AQGZFXNePuo-_Q/article-cover_image-shrink_600_2000/0/1709005843094?e=2147483647&v=beta&t=1T8SJ3NHTFkKZ8gC2cv6dJVAAPDX2FmW1IVhtHMsk_s" alt="Project Image">
+                    <div class="project-description">
+                        <a href="https://dmatuwidi.github.io" target="_blank">
+                            <p>Portfolio&nbsp</p>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>  
+                        <p>This site that you are viewing!</p> 
+                    </div>
+                </div>
             </div>
-        </section>
-        <section id="projects" class="projects"> <!-- add cards in this section-->
-            <div>
-                <h1>Projects</h1>
-                <span>
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>HTML & CSS</li>
-                        <li>SQL</li>
-                    </ul> 
-                </span>  
+            <!-- TEMPLATE
+            <div class="card-container">
+                <div class="project-card">
+                    <img class="project-img" src="" alt="Project Image">
+                    <div class="project-description">
+                        <a href="#" target="_blank">
+                            <p>Title&nbsp</p>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>  
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                    </div>
+                </div>
             </div>
-        </section>
-        <section id="contact" class="contact">
-            <div>
-                <h1>Contact</h1>
-                <span>
-                    You can find me here:
-                    <ul>
-                        <li><a>LinkedIn</a></li>
-                        <li><a>Email</a></li>
-                        <li><a>GitHub</a></li>
-                    </ul> 
-                </span>   
-            </div>
+            -->
         </section>
     </main>
-    <hr>
     <footer>
-        <nav>
-            <ul>
-                <span class="footlist">
-                    <li><a href="#">Back to Top</a></li>
-                </span>
-                <span>Damy Matuwidi © 2024</span>
-            </ul>
-        </nav>
+        <p>Damy Matuwidi © 2024</p>
+        <a href="#">Back to Top</a>
     </footer>
 </body>
 </html>
