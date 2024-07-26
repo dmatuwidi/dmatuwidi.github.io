@@ -1,174 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damy's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/f2a7d30dde.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <h2>Portfolio</h2>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Damy Matuwidi</h1>
-            <h2>Aspiring Software Engineer</h2>
-
-            <ul class="socials">
-                <li><a href="https://github.com/dmatuwidi" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a></li>
-                <li><a href="https://www.linkedin.com/in/damymatuwidi/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a></li>
-                <li><a href="mailto:dmatuwidi@gmail.com" target="_blank">
-                    <i class="fa-solid fa-envelope"></i>
-                </a></li>
-            </ul>
-        </section>
-        <section id="about" class="about">
-            <h3>About</h3>
-            <p>I've had a passion for computers since the late 2000's, spending almost all my time figuring out the many things I could do with one. Although the start of my programming passion began at age 6 where I first learnt the language <b>Lua</b> on the now popular gaming platform, <b>ROBLOX</b>, in 2011.</p><br>
-            <p> Seeing how others made captivating games inspired me to give a shot at it, leading me into various aspects of game design, including 3D Modelling, Graphics, Motion Design and more. At an early age, I was collaborating with other likeminded young people in order to make experiences others can enjoy.</p><br>
-            <p>This early passion has led me nowadays to pursue Computer Science at GCSE, A-Level and Degree level, as the subject continues to intrigue me at every step of the way. I aspire to put my theoretical and practical knowledge altogether to good use in the technology industry.</p>
-        </section>
-        <section id="skills" class="skills">
-            <h3>Skills</h3>
-            <h4>Technical Skills</h4>
-            <div class="radial-bars">
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path1" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">
-                        Python
-                    </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Damy Matuwidi</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Damy Matuwidi</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path2" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">75%</div>
-                    <div class="text">
-                        Java
-                    </div>
-                </div>
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path3" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">80%</div>
-                    <div class="text">
-                        HTML & CSS
-                    </div>
-                </div>
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path4" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">80%</div>
-                    <div class="text">
-                        SQL
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Damy Matuwidi</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Software Engineering Fellow @ HeadStarter AI</h2>
                     </div>
                 </div>
             </div>
-            <h4>Transferrable Skills</h4>
-            <div class="radial-bars">
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path5" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">
-                        Problem Solving
-                    </div>
-                </div>
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path6" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">80%</div>
-                    <div class="text">
-                        Teamwork
-                    </div>
-                </div>
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path7" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">100%</div>
-                    <div class="text">
-                        Communication
-                    </div>
-                </div>
-                <div class="radial">
-                    <svg x="8px" y="8px" viewbox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="90"></circle>
-                        <circle class="path path8" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="percentage">75%</div>
-                    <div class="text">
-                        Leadership
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">About Me</h2>
+                        <p class="text-white-50">
+                            I've had a passion for programming since the early 2010's, where I learnt my first language Lua on ROBLOX in 2011.
+                            Seeing how others made captivating games inspired me to give a shot at it, leading me into 3D Modelling, Graphics, Motion Design and more. <br><br>
+                            This early passion has led me nowadays to pursue Computer Science at GCSE, A-Level and Degree level, as the subject continues to intrigue me at every step of the way. I aspire to put my theoretical and practical knowledge altogether to good use in the technology industry.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="projects" class="projects">
-            <h3>Projects</h3>
-            <div class="card-container">
-                <div class="project-card">
-                    <img class="project-img" src="https://media.licdn.com/dms/image/D4E12AQGZFXNePuo-_Q/article-cover_image-shrink_600_2000/0/1709005843094?e=2147483647&v=beta&t=1T8SJ3NHTFkKZ8gC2cv6dJVAAPDX2FmW1IVhtHMsk_s" alt="Project Image">
-                    <div class="project-description">
-                        <a href="https://dmatuwidi.github.io" target="_blank">
-                            <p>Portfolio&nbsp</p>
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </a>  
-                        <p>This site that you are viewing!</p> 
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="static/esce.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Esce for VS Code</h4>
+                            <p class="text-black-50 mb-0">A sleek, comforting bluesteel dark mode theme for Visual Studio Code <a href="https://marketplace.visualstudio.com/items?itemName=dmatuwidi.esce" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a></p>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img class="project-img" src="static/esce.png" alt="Project Image">
-                    <div class="project-description">
-                        <a href="https://github.com/dmatuwidi/esce-vscode" target="_blank">
-                            <p>Esce&nbsp</p>
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </a>  
-                        <p>A dark theme for VS Code</p> 
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="static/coding.jpg" alt="Esce for VS Code Theme" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Skills</h4>
+                                    <p class="mb-0 text-white-50">I'm proficent in Python and Java, and have experience building websites with HTML and CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="static/setup.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Hobbies</h4>
+                                    <p class="mb-0 text-white-50">I enjoy programming, playing the flute and video games during my free time!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- TEMPLATE
-                <div class="project-card">
-                    <img class="project-img" src="" alt="Project Image">
-                    <div class="project-description">
-                        <a href="#" target="_blank">
-                            <p>Title&nbsp</p>
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </a>  
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">CV / Resume</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="static/DM_CV.pdf" target="_blank">Click Here!</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            -->
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="mailto:dmatuwidi@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a class="mx-2" href="https://linkedin.com/in/damymatuwidi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="mx-2" href="https://github.com/dmatuwidi" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
         </section>
-    </main>
-    <footer>
-        <p>Damy Matuwidi © 2024</p>
-        <a href="#">Back to Top</a>
-    </footer>
-</body>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Damy Matuwidi</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
