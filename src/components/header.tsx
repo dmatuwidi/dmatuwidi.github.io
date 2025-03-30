@@ -4,13 +4,13 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background grid grid-cols-2 p-4 sm:px-20 lg:px-40 border-b w-screen">
+    <header className="fixed top-0 z-50 grid grid-cols-2 p-4 sm:px-20 lg:px-40 border-b w-screen bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="flex justify-start">
         <p className="font-semibold text-xl md:text-2xl items-center">Damy Matuwidi</p>
       </div>
       <div className="hidden sm:flex justify-end space-x-2 md:space-x-4 items-center">
-        <Link href="/">About</Link>
-        <Link href="/">Projects</Link>
+        <Link href="#about">About</Link>
+        <Link href="#projects">Projects</Link>
         <Link href="/">CV</Link>
         <Link href="/">Contact</Link>
       </div>

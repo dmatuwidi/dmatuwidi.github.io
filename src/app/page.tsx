@@ -31,8 +31,8 @@ export default function Home() {
 
   return (
     <div className="md:space-y-10">
-      <section id="about" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 lg:py-80 space-y-5">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
+      <section id="about" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 lg:py-80 space-y-5 bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat relative z-0 before:content-[''] before:bg-linear-to-b before:from-white/0 before:to-white/100 before:absolute before:inset-0 before:z-[-5]">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl pt-10 md:pt-20 xl:pt-30">
           Hi, I'm <span className="text-secondary-foreground font-semibold">Damy Matuwidi</span>
         </h1>
         <p className="text-xl md:text-2xl mt-5 break-words text-wrap">
@@ -42,7 +42,6 @@ export default function Home() {
           I'm an emerging software engineer with hands-on experience in Artificial Intelligence and Full-stack Web Development with a comprehensive understanding of software development principles. I can quickly master new technologies, shown by my academic work and personal projects. I'm commited to delivering quality, innovative solutions and excited to contribute to cutting-edge technological advancements.
         </p>
       </section>
-      <Separator className="my-5 lg:my-40 "/>
       <section id="projects" className="py-20 lg:py-40 space-y-10 px-10 sm:px-20">
         <h2 className="text-3xl lg:text-5xl font-semibold px-30 sm:px-0 md:px-20 py-10">
           Projects
