@@ -47,11 +47,36 @@ export default function Home() {
     name: "C++",
     progress: 60
   }, {
-    name: "HTML",
+    name: "HTML / CSS",
     progress: 85
+  }];
+
+  const frameworks = [{
+    name: "Next.js",
+    progress: 80
   }, {
-    name: "CSS",
-    progress: 85
+    name: "Express.js",
+    progress: 60
+  }, {
+    name: "Tailwind CSS",
+    progress: 80
+  }, {
+    name: "Bootstrap",
+    progress: 70
+  }, {
+    name: "Django",
+    progress: 80
+  }];
+
+  const databases = [{
+    name: "PostgreSQL",
+    progress: 60
+  }, {
+    name: "SQLite",
+    progress: 80
+  }, {
+    name: "Firebase",
+    progress: 75
   }];
 
   return (
@@ -67,8 +92,8 @@ export default function Home() {
           I'm an emerging software engineer with hands-on experience in Artificial Intelligence and Full-stack Web Development with a comprehensive understanding of software development principles. I can quickly master new technologies, shown by my academic work and personal projects. I'm commited to delivering quality, innovative solutions and excited to contribute to cutting-edge technological advancements.
         </p>
       </section>
-      <section id="projects" className="py-20 lg:py-40 space-y-10 px-10 sm:px-20">
-        <h2 className="text-3xl lg:text-5xl font-semibold px-30 sm:px-0 md:px-20 py-10">
+      <section id="projects" className="py-20 lg:py-40 space-y-10 px-15 sm:px-20">
+        <h2 className="text-3xl lg:text-5xl font-semibold text-center sm:text-left pb-10 lg:px-20">
           Projects
         </h2>
         <Carousel>
@@ -103,16 +128,16 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </section>
-      <section id="skills" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 space-y-5">
-        <h2 className="text-5xl font-semibold">Skills</h2>
-        <Tabs defaultValue="languages" className="w-full">
-          <TabsList className="w-full">
-            <TabsTrigger value="languages">Languages</TabsTrigger>
-            <TabsTrigger value="frameworks">Frameworks</TabsTrigger>
-            <TabsTrigger value="databases">Databases</TabsTrigger>
+      <section id="skills" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 space-y-5 mb-25">
+        <h2 className="text-3xl lg:text-5xl font-semibold text-center sm:text-left pb-10">Skills</h2>
+        <Tabs defaultValue="languages" className="w-full overflow-hidden h-100">
+          <TabsList className="w-full h-fit space-x-5">
+            <TabsTrigger value="languages" className="text-lg">Languages</TabsTrigger>
+            <TabsTrigger value="frameworks" className="text-lg">Frameworks</TabsTrigger>
+            <TabsTrigger value="databases" className="text-lg">Databases</TabsTrigger>
           </TabsList>
           <TabsContent value="languages">
-            <div className="p-20 px-60">
+            <div className="p-5 pt-15 lg:p-20">
               <ul className="grid grid-cols-2 gap-15">
                 {languages.map((language, index) => (
                   <li key={index} className="flex flex-col space-y-2">
@@ -126,7 +151,40 @@ export default function Home() {
               </ul>
             </div>
           </TabsContent>
+          <TabsContent value="frameworks">
+            <div className="p-5 pt-15 lg:p-20">
+              <ul className="grid grid-cols-2 gap-15">
+                {frameworks.map((framework, index) => (
+                  <li key={index} className="flex flex-col space-y-2">
+                    <div className="flex justify-between items-center">
+                      <p className="text-xl font-medium">{framework.name}</p>
+                      <p className="text-xl font-semibold">{framework.progress}%</p>
+                    </div>
+                    <Progress value={framework.progress} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </TabsContent>
+          <TabsContent value="databases">
+            <div className="p-5 pt-15 lg:p-20">
+              <ul className="grid grid-cols-2 gap-15">
+                {databases.map((database, index) => (
+                  <li key={index} className="flex flex-col space-y-2">
+                    <div className="flex justify-between items-center">
+                      <p className="text-xl font-medium">{database.name}</p>
+                      <p className="text-xl font-semibold">{database.progress}%</p>
+                    </div>
+                    <Progress value={database.progress} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </TabsContent>
         </Tabs>
+      </section>
+      <section id="experience" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 space-y-5">
+        <h2 className="text-3xl lg:text-5xl font-semibold text-center sm:text-left pb-10">Experience</h2>
       </section>
     </div>
   );
