@@ -3,7 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IconExternalLink } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,7 +29,30 @@ export default function Home() {
     technologies: ["Next.js", "Firebase", "Google Gemini"],
     link: "https://github.com/MateuszNiedbalski/Chat-Bot",
     image: "/chatbot.jpg"
-  }]
+  }];
+
+  const languages = [{
+    name: "Python",
+    progress: 90
+  }, {
+    name: "Java",
+    progress: 70
+  }, {
+    name: "JavaScript",
+    progress: 80
+  }, {
+    name: "TypeScript",
+    progress: 80
+  }, {
+    name: "C++",
+    progress: 60
+  }, {
+    name: "HTML",
+    progress: 85
+  }, {
+    name: "CSS",
+    progress: 85
+  }];
 
   return (
     <div className="md:space-y-10">
@@ -78,11 +103,30 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </section>
-      <Separator className="my-40 "/>
-      <section id="projects" className="py-40 space-y-10">
-        <h2 className="text-5xl font-semibold">
-            Skillset
-          </h2>
+      <section id="skills" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 space-y-5">
+        <h2 className="text-5xl font-semibold">Skills</h2>
+        <Tabs defaultValue="languages" className="w-full">
+          <TabsList className="w-full">
+            <TabsTrigger value="languages">Languages</TabsTrigger>
+            <TabsTrigger value="frameworks">Frameworks</TabsTrigger>
+            <TabsTrigger value="databases">Databases</TabsTrigger>
+          </TabsList>
+          <TabsContent value="languages">
+            <div className="p-20 px-60">
+              <ul className="grid grid-cols-2 gap-15">
+                {languages.map((language, index) => (
+                  <li key={index} className="flex flex-col space-y-2">
+                    <div className="flex justify-between items-center">
+                      <p className="text-xl font-medium">{language.name}</p>
+                      <p className="text-xl font-semibold">{language.progress}%</p>
+                    </div>
+                    <Progress value={language.progress} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </TabsContent>
+        </Tabs>
       </section>
     </div>
   );
