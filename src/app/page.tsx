@@ -113,18 +113,18 @@ export default function Home() {
         <p className="text-md sm:text-lg mt-5 break-words text-wrap">
           I'm an emerging software engineer with hands-on experience in Artificial Intelligence and Full-stack Web Development with a comprehensive understanding of software development principles. I can quickly master new technologies, shown by my academic work and personal projects. I'm commited to delivering quality, innovative solutions and excited to contribute to cutting-edge technological advancements.
         </p>
-        <div className="flex space-x-5 items-center">
+        <div className="flex space-x-2 sm:space-x-5 items-center">
           <a href="https://www.linkedin.com/in/damymatuwidi" className="bg-white/50 hover:bg-white/30 p-1 rounded-lg hover:text-primary/70 transition-all duration-200">
-            <IconBrandLinkedin size={36} />
+            <IconBrandLinkedin size={30} />
           </a>
           <a href="https://www.github.com/dmatuwidi" className="bg-white/50 hover:bg-white/30 p-1 rounded-lg hover:text-primary/70 transition-all duration-200">
-            <IconBrandGithub size={36} />
+            <IconBrandGithub size={30} />
           </a>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger className="bg-white/50 hover:bg-white/30 p-1 rounded-lg">
                 <a href="mailto:dmatuwdi@gmail.com" className="hover:text-primary/70 transition-all duration-200">
-                  <IconMailShare size={36}/>
+                  <IconMailShare size={30} />
                 </a>
               </TooltipTrigger>
               <TooltipContent>
@@ -141,7 +141,7 @@ export default function Home() {
         <Carousel>
           <CarouselContent>
             {projects.map((project, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-8">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <Card className="flex flex-col h-full justify-between">
                   <CardHeader className="space-y-2">
                     <AspectRatio ratio={12 / 9}>
@@ -173,19 +173,19 @@ export default function Home() {
       <section id="skills" className="py-20 md:py-40 px-10 sm:px-20 lg:px-40 space-y-5 mb-25">
         <h2 className="text-3xl lg:text-5xl font-semibold text-center">Skills</h2>
         <Tabs defaultValue="languages" className="w-full max-w-5xl mx-auto overflow-hidden h-100">
-          <TabsList className="w-full h-fit space-x-5">
-            <TabsTrigger value="languages" className="text-lg">Languages</TabsTrigger>
-            <TabsTrigger value="frameworks" className="text-lg">Frameworks</TabsTrigger>
-            <TabsTrigger value="databases" className="text-lg">Databases</TabsTrigger>
+          <TabsList className="w-full h-fit sm:space-x-5">
+            <TabsTrigger value="languages" className="text-sm sm:text-lg">Languages</TabsTrigger>
+            <TabsTrigger value="frameworks" className="text-sm sm:text-lg">Frameworks</TabsTrigger>
+            <TabsTrigger value="databases" className="text-sm sm:text-lg">Databases</TabsTrigger>
           </TabsList>
           <TabsContent value="languages">
-            <div className="p-5 pt-15 lg:p-20">
-              <ul className="grid grid-cols-2 gap-15">
+            <div className="sm:p-5 pt-15 lg:p-20">
+              <ul className="grid grid-cols-2 gap-5 sm:gap-15">
                 {languages.map((language, index) => (
                   <li key={index} className="flex flex-col space-y-2">
                     <div className="flex justify-between items-center">
-                      <p className="text-xl font-medium">{language.name}</p>
-                      <p className="text-xl font-semibold">{language.progress}%</p>
+                      <p className="sm:text-xl font-medium">{language.name}</p>
+                      <p className="sm:text-xl font-semibold">{language.progress}%</p>
                     </div>
                     <Progress value={language.progress} />
                   </li>
@@ -194,13 +194,13 @@ export default function Home() {
             </div>
           </TabsContent>
           <TabsContent value="frameworks">
-            <div className="p-5 pt-15 lg:p-20">
-              <ul className="grid grid-cols-2 gap-15">
+            <div className="sm:p-5 pt-15 lg:p-20">
+              <ul className="grid grid-cols-2 gap-5 sm:gap-15">
                 {frameworks.map((framework, index) => (
                   <li key={index} className="flex flex-col space-y-2">
                     <div className="flex justify-between items-center">
-                      <p className="text-xl font-medium">{framework.name}</p>
-                      <p className="text-xl font-semibold">{framework.progress}%</p>
+                      <p className="sm:text-xl font-medium">{framework.name}</p>
+                      <p className="sm:text-xl font-semibold">{framework.progress}%</p>
                     </div>
                     <Progress value={framework.progress} />
                   </li>
@@ -209,13 +209,13 @@ export default function Home() {
             </div>
           </TabsContent>
           <TabsContent value="databases">
-            <div className="p-5 pt-15 lg:p-20">
-              <ul className="grid grid-cols-2 gap-15">
+            <div className="sm:p-5 pt-15 lg:p-20">
+              <ul className="grid grid-cols-2 gap-5 sm:gap-15">
                 {databases.map((database, index) => (
                   <li key={index} className="flex flex-col space-y-2">
                     <div className="flex justify-between items-center">
-                      <p className="text-xl font-medium">{database.name}</p>
-                      <p className="text-xl font-semibold">{database.progress}%</p>
+                      <p className="sm:text-xl font-medium">{database.name}</p>
+                      <p className="sm:text-xl font-semibold">{database.progress}%</p>
                     </div>
                     <Progress value={database.progress} />
                   </li>
@@ -229,7 +229,7 @@ export default function Home() {
         <h2 className="text-3xl lg:text-5xl font-semibold text-center">Experience</h2>
         <div className="flex flex-col space-y-5 justify-center">
           {experiences.map((experience, index) => (
-            <Card key={index} className="w-4xl self-center">
+            <Card key={index} className="w-full max-w-4xl overflow-hidden self-center">
               <CardHeader>
                 <CardTitle className="text-xl">{experience.title}</CardTitle>
                 <CardDescription className="text-base">
@@ -245,9 +245,9 @@ export default function Home() {
                 </ul>
               </CardContent>
               <CardFooter className="flex flex-col self-start">
-                <div className="flex gap-x-2"> 
+                <div className="flex space-x-2 space-y-2 flex-wrap"> 
                   {experience.skills.map((skill) => (
-                    <Badge key={skill} className="text-sm">{skill}</Badge>
+                    <Badge key={skill} className="text-sm h-7">{skill}</Badge>
                   ))}
                 </div>
               </CardFooter>
