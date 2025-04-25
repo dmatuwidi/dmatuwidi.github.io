@@ -6,7 +6,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { IconExternalLink } from "@tabler/icons-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { IconBrandGithub, IconBrandLinkedin, IconExternalLink, IconMail, IconMailShare, IconShare } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -79,8 +80,29 @@ export default function Home() {
     progress: 75
   }];
 
+  const experiences = [{
+    title: "Software Engineering Fellow",
+    company: "Headstarter AI",
+    description: [
+      "Proficiently built and deployed 5 AI projects in 5 weeks, followed agile methodologies with weekly sprints and incorporated CI/CD practices for iterative deployment.",
+      "Worked collaboratively to develop an interactive customer support agent with an integrated custom RAG pipeline using Gemini and Pinecone."
+    ],
+    date: "July 2024 - September 2024",
+    skills: ["AI", "Next.js", "Firebase", "Clerk", "Teamwork", "Leadership"]
+  }, {
+    title: "Customer Team Member",
+    company: "Co-op",
+    description: [
+      "Attentively responded to customer inquiries and resolved complaints efficiently.",
+      "Communicated with team members to manage and replenish shop inventory.",
+      "Ensured excellent store presentation while maintaining a high level of security awareness"
+    ],
+    date: "September 2023 - January 2025",
+    skills: ["Teamwork", "Attention to detail", "Customer Service", "Communication", "Problem-solving"]
+  }]
+
   return (
-    <div className="md:space-y-10">
+    <div>
       <section id="about" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 lg:py-80 space-y-5 bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat relative z-0 before:content-[''] before:bg-linear-to-b before:from-white/0 before:to-white/100 before:absolute before:inset-0 before:z-[-5]">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl pt-10 md:pt-20 xl:pt-30">
           Hi, I'm <span className="text-secondary-foreground font-semibold">Damy Matuwidi</span>
@@ -91,9 +113,29 @@ export default function Home() {
         <p className="text-md sm:text-lg mt-5 break-words text-wrap">
           I'm an emerging software engineer with hands-on experience in Artificial Intelligence and Full-stack Web Development with a comprehensive understanding of software development principles. I can quickly master new technologies, shown by my academic work and personal projects. I'm commited to delivering quality, innovative solutions and excited to contribute to cutting-edge technological advancements.
         </p>
+        <div className="flex space-x-5 items-center">
+          <a href="https://www.linkedin.com/in/damymatuwidi" className="bg-white/50 hover:bg-white/30 p-1 rounded-lg hover:text-primary/70 transition-all duration-200">
+            <IconBrandLinkedin size={36} />
+          </a>
+          <a href="https://www.github.com/dmatuwidi" className="bg-white/50 hover:bg-white/30 p-1 rounded-lg hover:text-primary/70 transition-all duration-200">
+            <IconBrandGithub size={36} />
+          </a>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="bg-white/50 hover:bg-white/30 p-1 rounded-lg">
+                <a href="mailto:dmatuwdi@gmail.com" className="hover:text-primary/70 transition-all duration-200">
+                  <IconMailShare size={36}/>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="text-sm"> <span className="underline">dmatuwidi@gmail.com</span> - if mailto links don't work!</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
       </section>
-      <section id="projects" className="py-20 lg:py-40 space-y-10 px-15 sm:px-20">
-        <h2 className="text-3xl lg:text-5xl font-semibold text-center sm:text-left pb-10 lg:px-20">
+      <section id="projects" className="py-20 lg:px-40 space-y-10 px-15 sm:px-20">
+        <h2 className="text-3xl lg:text-5xl font-semibold text-center lg:px-20">
           Projects
         </h2>
         <Carousel>
@@ -128,9 +170,9 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </section>
-      <section id="skills" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 space-y-5 mb-25">
-        <h2 className="text-3xl lg:text-5xl font-semibold text-center sm:text-left pb-10">Skills</h2>
-        <Tabs defaultValue="languages" className="w-full overflow-hidden h-100">
+      <section id="skills" className="py-20 md:py-40 px-10 sm:px-20 lg:px-40 space-y-5 mb-25">
+        <h2 className="text-3xl lg:text-5xl font-semibold text-center">Skills</h2>
+        <Tabs defaultValue="languages" className="w-full max-w-5xl mx-auto overflow-hidden h-100">
           <TabsList className="w-full h-fit space-x-5">
             <TabsTrigger value="languages" className="text-lg">Languages</TabsTrigger>
             <TabsTrigger value="frameworks" className="text-lg">Frameworks</TabsTrigger>
@@ -183,8 +225,40 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </section>
-      <section id="experience" className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 space-y-5">
-        <h2 className="text-3xl lg:text-5xl font-semibold text-center sm:text-left pb-10">Experience</h2>
+      <section id="experience" className="py-20 px-10 sm:px-20 lg:px-40 space-y-5">
+        <h2 className="text-3xl lg:text-5xl font-semibold text-center">Experience</h2>
+        <div className="flex flex-col space-y-5 justify-center">
+          {experiences.map((experience, index) => (
+            <Card key={index} className="w-4xl self-center">
+              <CardHeader>
+                <CardTitle className="text-xl">{experience.title}</CardTitle>
+                <CardDescription className="text-base">
+                  {experience.company}<br />
+                  {experience.date}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="pl-5 space-y-2">
+                {experience.description.map((point) => (
+                  <li key={point} className="text-base list-disc">{point}</li>
+                ))}  
+                </ul>
+              </CardContent>
+              <CardFooter className="flex flex-col self-start">
+                <div className="flex gap-x-2"> 
+                  {experience.skills.map((skill) => (
+                    <Badge key={skill} className="text-sm">{skill}</Badge>
+                  ))}
+                </div>
+              </CardFooter>
+            </Card>
+          ))}
+          <a href="cv.pdf" className="self-center pt-10 flex items-center space-x-2 hover:text-primary/70 transition-all duration-200">
+            <h3 className="text-lg">View full CV </h3>
+            <IconExternalLink size={20} />
+          </a>
+          
+        </div>
       </section>
     </div>
   );

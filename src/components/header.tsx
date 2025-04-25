@@ -1,10 +1,29 @@
+"use client"
+
 import Link from "next/link";
 import { IconMenu2 } from "@tabler/icons-react";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 10;
+      setIsScrolled(scrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 z-50 grid grid-cols-2 p-4 sm:px-20 lg:px-40 border-b w-screen bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className={cn("fixed top-0 z-50 grid grid-cols-2 p-4 sm:px-20 lg:px-40 w-screen transition-all duration-300", isScrolled && "bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80")}>
       <div className="flex justify-start">
         <p className="font-semibold text-xl md:text-2xl items-center">Damy Matuwidi</p>
       </div>
@@ -12,8 +31,7 @@ export default function Header() {
         <Link href="#about">About</Link>
         <Link href="#projects">Projects</Link>
         <Link href="#skills">Skills</Link>
-        <Link href="/">CV</Link>
-        <Link href="/">Contact</Link>
+        <Link href="#experience">Experience</Link>
       </div>
       <div className="flex sm:hidden justify-end">
         <Popover>
@@ -24,8 +42,7 @@ export default function Header() {
             <Link href="#about">About</Link>
             <Link href="#projects">Projects</Link>
             <Link href="#skills">Skills</Link>
-            <Link href="/">CV</Link>
-            <Link href="/">Contact</Link>
+            <Link href="#experience">Experience</Link>
           </PopoverContent>
         </Popover>
       </div>
