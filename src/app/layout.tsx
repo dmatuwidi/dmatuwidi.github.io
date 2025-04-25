@@ -10,7 +10,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Damy Matuwidi",
-  description: "Damy Matuwidi is a penultimate year Computer Science student who is an aspiring Software Engineer.",
+  description:
+    "Damy Matuwidi is a penultimate year Computer Science student who is an aspiring Software Engineer.",
 };
 
 export default function RootLayout({
@@ -22,9 +23,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter} antialiased`}>
         <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

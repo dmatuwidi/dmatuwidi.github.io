@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { IconMenu2 } from "@tabler/icons-react";
@@ -23,9 +23,17 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={cn("fixed top-0 z-50 grid grid-cols-2 p-4 sm:px-20 lg:px-40 w-screen transition-all duration-300", isScrolled && "bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80")}>
+    <header
+      className={cn(
+        "fixed top-0 z-50 grid grid-cols-2 p-4 sm:px-20 lg:px-40 w-screen transition-all duration-300",
+        isScrolled &&
+          "bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80",
+      )}
+    >
       <div className="flex justify-start">
-        <p className="font-semibold text-xl md:text-2xl items-center">Damy Matuwidi</p>
+        <p className="font-semibold text-xl md:text-2xl items-center">
+          Damy Matuwidi
+        </p>
       </div>
       <div className="hidden sm:flex justify-end space-x-2 md:space-x-4 items-center">
         <Link href="#about">About</Link>
@@ -47,5 +55,5 @@ export default function Header() {
         </Popover>
       </div>
     </header>
-  )
+  );
 }
