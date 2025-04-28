@@ -21,6 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link
+          rel="preload"
+          href="/background.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          href="/background-small.webp"
+          as="image"
+          type="image/webp"
+        />
+      </head>
       <body className={`${inter} antialiased`}>
         <Header />
         <main className="min-h-screen">{children}</main>

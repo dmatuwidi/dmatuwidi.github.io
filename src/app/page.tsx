@@ -41,7 +41,8 @@ export default function Home() {
         "A sleek, comforting bluesteel dark mode theme for Visual Studio Code.",
       technologies: ["Theme"],
       link: "https://marketplace.visualstudio.com/items?itemName=dmatuwidi.esce&ssr=false#overview",
-      image: "/esce.png",
+      link_description: "Go to marketplace",
+      image: "/esce.webp",
     },
     {
       title: "AI Flashcards SaaS App",
@@ -49,7 +50,8 @@ export default function Home() {
         "AI-powered flashcards web-app. Handled AI integration, coordinated front-end design.",
       technologies: ["Next.js", "Stripe", "Firebase", "Google Gemini", "Clerk"],
       link: "ttps://github.com/dmatuwidi/flashcards-saas",
-      image: "/flashcards.jpg",
+      link_description: "View on GitHub",
+      image: "/flashcards.webp",
     },
     {
       title: "AI Chat Bot Web-app",
@@ -57,7 +59,8 @@ export default function Home() {
         "Customer service support agent. Integrated and optimised AI back-end, coordinated front-end efforts.",
       technologies: ["Next.js", "Firebase", "Google Gemini"],
       link: "https://github.com/MateuszNiedbalski/Chat-Bot",
-      image: "/chatbot.jpg",
+      link_description: "View on GitHub",
+      image: "/chatbot.webp",
     },
   ];
 
@@ -160,7 +163,7 @@ export default function Home() {
     <div>
       <section
         id="about"
-        className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 lg:py-80 space-y-5 bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat relative z-0 before:content-[''] before:bg-linear-to-b before:from-white/0 before:to-white/100 before:absolute before:inset-0 before:z-[-5]"
+        className="py-20 md:py-40 px-10 sm:px-20 lg:p-40 lg:py-80 space-y-5 bg-[url('/background-small.webp')] lg:bg-[url('/background.webp')] bg-cover bg-center bg-no-repeat relative z-0 before:content-[''] before:bg-linear-to-b before:from-white/0 before:to-white/100 before:absolute before:inset-0 before:z-[-5]"
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl pt-10 md:pt-20 xl:pt-30">
           Hi, I&apos;m{" "}
@@ -182,25 +185,31 @@ export default function Home() {
           solutions and excited to contribute to cutting-edge technological
           advancements.
         </p>
-        <div className="flex space-x-2 sm:space-x-5 items-center">
+        <div className="flex space-x-10 items-center">
           <a
             href="https://www.linkedin.com/in/damymatuwidi"
             className="bg-white/50 hover:bg-white/30 p-1 rounded-lg hover:text-primary/70 transition-all duration-200"
+            aria-label="Visit Damy Matuwidi's LinkedIn profile!"
           >
             <IconBrandLinkedin size={30} />
           </a>
           <a
             href="https://www.github.com/dmatuwidi"
             className="bg-white/50 hover:bg-white/30 p-1 rounded-lg hover:text-primary/70 transition-all duration-200"
+            aria-label="Visit Damy Matuwidi's GitHub profile!"
           >
             <IconBrandGithub size={30} />
           </a>
           <TooltipProvider>
             <Tooltip>
-              <TooltipTrigger className="bg-white/50 hover:bg-white/30 p-1 rounded-lg">
+              <TooltipTrigger
+                className="bg-white/50 hover:bg-white/30 p-1 rounded-lg"
+                aria-label="Send an email to Damy Matuwidi!"
+              >
                 <a
                   href="mailto:dmatuwdi@gmail.com"
                   className="hover:text-primary/70 transition-all duration-200"
+                  aria-label="Send an email to Damy Matuwidi!"
                 >
                   <IconMailShare size={30} />
                 </a>
@@ -232,6 +241,7 @@ export default function Home() {
                     <AspectRatio ratio={12 / 9}>
                       <Image
                         src={project.image}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         fill={true}
                         alt="Project Image"
                         className="rounded-md"
@@ -254,7 +264,7 @@ export default function Home() {
                   <CardFooter className="justify-end">
                     <Link href={project.link}>
                       <Button className="cursor-pointer">
-                        See more <IconExternalLink />
+                        {project.link_description} <IconExternalLink />
                       </Button>
                     </Link>
                   </CardFooter>
@@ -294,12 +304,20 @@ export default function Home() {
                 {languages.map((language, index) => (
                   <li key={index} className="flex flex-col space-y-2">
                     <div className="flex justify-between items-center">
-                      <p className="sm:text-xl font-medium">{language.name}</p>
+                      <p
+                        className="sm:text-xl font-medium"
+                        id={`language_` + index}
+                      >
+                        {language.name}
+                      </p>
                       <p className="sm:text-xl font-semibold">
                         {language.progress}%
                       </p>
                     </div>
-                    <Progress value={language.progress} />
+                    <Progress
+                      value={language.progress}
+                      aria-labelledby={`language_` + index}
+                    />
                   </li>
                 ))}
               </ul>
@@ -311,12 +329,20 @@ export default function Home() {
                 {frameworks.map((framework, index) => (
                   <li key={index} className="flex flex-col space-y-2">
                     <div className="flex justify-between items-center">
-                      <p className="sm:text-xl font-medium">{framework.name}</p>
+                      <p
+                        className="sm:text-xl font-medium"
+                        id={`framework_` + index}
+                      >
+                        {framework.name}
+                      </p>
                       <p className="sm:text-xl font-semibold">
                         {framework.progress}%
                       </p>
                     </div>
-                    <Progress value={framework.progress} />
+                    <Progress
+                      value={framework.progress}
+                      aria-labelledby={`framework_` + index}
+                    />
                   </li>
                 ))}
               </ul>
@@ -328,12 +354,20 @@ export default function Home() {
                 {databases.map((database, index) => (
                   <li key={index} className="flex flex-col space-y-2">
                     <div className="flex justify-between items-center">
-                      <p className="sm:text-xl font-medium">{database.name}</p>
+                      <p
+                        className="sm:text-xl font-medium"
+                        id={`database_` + index}
+                      >
+                        {database.name}
+                      </p>
                       <p className="sm:text-xl font-semibold">
                         {database.progress}%
                       </p>
                     </div>
-                    <Progress value={database.progress} />
+                    <Progress
+                      value={database.progress}
+                      aria-labelledby={`database_` + index}
+                    />
                   </li>
                 ))}
               </ul>

@@ -43,7 +43,7 @@ export default function Header() {
       </div>
       <div className="flex sm:hidden justify-end">
         <Popover>
-          <PopoverTrigger>
+          <PopoverTrigger aria-label="Page links menu button">
             <IconMenu2 />
           </PopoverTrigger>
           <PopoverContent className="flex flex-col w-fit space-y-4">
