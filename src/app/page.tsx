@@ -25,6 +25,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import {
+  IconBookmark,
   IconBrandGithub,
   IconBrandLinkedin,
   IconExternalLink,
@@ -199,6 +200,13 @@ export default function Home() {
             aria-label="Visit Damy Matuwidi's GitHub profile!"
           >
             <IconBrandGithub size={30} />
+          </a>
+          <a
+            href="https://damymatuwidi.substack.com/"
+            className="bg-white/50 hover:bg-white/30 p-1 rounded-lg hover:text-primary/70 transition-all duration-200"
+            aria-label="Read Damy Matuwidi's Substack!"
+          >
+            <IconBookmark size={30} />
           </a>
           <TooltipProvider>
             <Tooltip>
