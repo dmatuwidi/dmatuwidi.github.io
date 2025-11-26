@@ -89,55 +89,25 @@ export default function Home() {
   ];
 
   const languages = [
-    {
-      name: 'Python',
-    },
-    {
-      name: 'Java',
-    },
-    {
-      name: 'JavaScript',
-    },
-    {
-      name: 'TypeScript',
-    },
-    {
-      name: 'C++',
-    },
-    {
-      name: 'HTML / CSS',
-    },
+    'Python',
+    'Java',
+    'JavaScript',
+    'TypeScript',
+    'C++',
+    'HTML / CSS',
   ];
 
   const frameworks = [
-    {
-      name: 'Next.js',
-    },
-    {
-      name: 'Express.js',
-    },
-    {
-      name: 'Tailwind CSS',
-    },
-    {
-      name: 'Bootstrap',
-    },
-    {
-      name: 'Django',
-    },
+    'Next.js',
+    'Express.js',
+    'Tailwind CSS',
+    'Bootstrap',
+    'Django',
+    'React',
+    'Node.js',
   ];
 
-  const databases = [
-    {
-      name: 'PostgreSQL',
-    },
-    {
-      name: 'SQLite',
-    },
-    {
-      name: 'Firebase',
-    },
-  ];
+  const databases = ['PostgreSQL', 'SQLite', 'Firebase'];
 
   const experiences = [
     {
@@ -166,7 +136,7 @@ export default function Home() {
       description: [
         'Attentively responded to customer inquiries and resolved complaints efficiently.',
         'Communicated with team members to manage and replenish shop inventory.',
-        'Ensured excellent store presentation while maintaining a high level of security awareness',
+        'Ensured excellent store presentation while maintaining a high level of security awareness.',
       ],
       date: 'September 2023 - January 2025',
       skills: [
@@ -261,6 +231,7 @@ export default function Home() {
                         <Image
                           src={project.image}
                           fill={true}
+                          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                           alt="Project Image"
                           className="rounded-lg shadow-lg shadow-black/15"
                         />
@@ -326,7 +297,7 @@ export default function Home() {
                           className="font-medium sm:text-xl"
                           id={`language_` + index}
                         >
-                          {language.name}
+                          {language}
                         </p>
                       </div>
                     </li>
@@ -344,7 +315,7 @@ export default function Home() {
                           className="font-medium sm:text-xl"
                           id={`framework_` + index}
                         >
-                          {framework.name}
+                          {framework}
                         </p>
                       </div>
                     </li>
@@ -362,7 +333,7 @@ export default function Home() {
                           className="font-medium sm:text-xl"
                           id={`database_` + index}
                         >
-                          {database.name}
+                          {database}
                         </p>
                       </div>
                     </li>
@@ -403,7 +374,7 @@ export default function Home() {
                   </ul>
                 </CardContent>
                 <CardFooter className="flex flex-col self-start">
-                  <div className="flex flex-wrap space-y-2 space-x-2">
+                  <div className="flex flex-wrap gap-2">
                     {experience.skills.map((skill) => (
                       <Badge key={skill} className="h-7 text-sm">
                         {skill}
